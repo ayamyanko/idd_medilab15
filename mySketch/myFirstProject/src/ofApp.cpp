@@ -23,6 +23,7 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
     for (int i = 0; i < num; i++) {
+        position[i] += velocity[i];
         if(position[i].x < 0 || position[i].x > ofGetWidth()){
             velocity[i].x *=-1;
         }
