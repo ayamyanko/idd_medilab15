@@ -8,11 +8,19 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
+    for(int i =0; i < NUM; i++){
+        particle[i].addForce(ofVec2f(0,1.0));
+        particle[i].update();
+        particle[i].bounceOffWalls();
+    }
 
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    for(int i = 0; i <NUM; i++){
+    particle[i].draw();
+    }
 
 }
 
@@ -43,6 +51,16 @@ void ofApp::mousePressed(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
+    for(int i = 0; i < NUM; i++){
+        
+    particle[i].position.set(x,y);
+    particle[i].velocity.set(0,0);
+        float length = ofRandom(20);
+        float angle = ofRandom(2*PI);
+        float rx =length * cos(angle);
+        float rY = length * sin(angle);
+    particle[i].acceleration.set(ofRandom(-10, 10),ofRandom(-10, 10));
+    }
 
 }
 
