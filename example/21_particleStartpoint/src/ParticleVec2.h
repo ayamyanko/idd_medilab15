@@ -7,7 +7,10 @@ public:
     void update();
     void draw();
     void addForce(ofVec2f force);
+<<<<<<< HEAD
     void addForce(float forceX,float forceY);
+=======
+>>>>>>> tado/master
     void bounceOffWalls();
     
     ofVec2f velocity;
@@ -16,5 +19,8 @@ public:
     float mass;
     float radius;
     float friction;
+<<<<<<< HEAD
     
+=======
+>>>>>>> tado/master
 };

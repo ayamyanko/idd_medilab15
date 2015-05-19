@@ -20,8 +20,21 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
     
+<<<<<<< HEAD
     static const int NUM = 500;
     ParticleVec2 particle[NUM];
     
     
+=======
+    static const int NUM = 5000;
+    ParticleVec2 particle[NUM];
+>>>>>>> tado/master
 };
+
+
+
+
+
+
+
+
