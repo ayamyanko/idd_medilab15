@@ -12,7 +12,9 @@ void ofApp::setup(){
     w = 200;
     h = 200;
     
-    createMesh();
+    plane=ofPlanePrimitive(400,400,20,20);
+    
+    //createMesh();
 }
 
 //--------------------------------------------------------------
@@ -42,7 +44,7 @@ void ofApp::draw(){
     
     // 頂点の位置をドットで表示
     ofTranslate(-w / 2, -h / 2);
-    mesh.drawWireframe();
+    plane.drawWireframe();
     
     cam.end(); // カメラ終了
     
